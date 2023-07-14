@@ -1,0 +1,712 @@
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        inicio.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git add inicio
+fatal: pathspec 'inicio' did not match any files
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git add inicio.html
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   inicio.html
+
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -m "primer esqueleto de pagina"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Punto Digital@CH-FONTANA-009.(none)')
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config --global user.name josefretes2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config --global user.name
+josefretes2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config --global user.email
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config --global user.email josefretes2@gmail.com
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git config --global user.email
+josefretes2@gmail.com
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -m "primer esqueleto de pagina"
+[master (root-commit) ef3dece] primer esqueleto de pagina
+ 1 file changed, 12 insertions(+)
+ create mode 100644 inicio.html
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git remote add origin https://github.com/josefretes2/viernes14.git
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/josefretes2/viernes14.git'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push -u origin master
+
+
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 401 bytes | 401.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/josefretes2/viernes14.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -am "agregué titulo"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -am "agregué titulo"
+[master 1a07cc6] agregué titulo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/josefretes2/viernes14.git
+   ef3dece..1a07cc6  master -> master
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -am "cambie titulo a h2"
+[master b8c0f30] cambie titulo a h2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/josefretes2/viernes14.git
+   1a07cc6..b8c0f30  master -> master
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log
+commit b8c0f30fcec3c6bcb04018809f7790206112b965 (HEAD -> master, origin/master)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+commit 1a07cc650a848d09ea4d317273ed897129b99459
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:08:10 2023 -0300
+
+    agregué titulo
+
+commit ef3deceb2c772834eaf6495b499d214da58f1059
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 14:44:58 2023 -0300
+
+    primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log --oneline
+b8c0f30 (HEAD -> master, origin/master) cambie titulo a h2
+1a07cc6 agregué titulo
+ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log --oneline --graph
+* b8c0f30 (HEAD -> master, origin/master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git branch
+* master
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git branch rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git branch
+* master
+  rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git show
+commit b8c0f30fcec3c6bcb04018809f7790206112b965 (HEAD -> master, origin/master, rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+diff --git a/inicio.html b/inicio.html
+index 3f35df1..fcf7e78 100644
+--- a/inicio.html
++++ b/inicio.html
+@@ -7,6 +7,6 @@
+     <title>Pagina de inicio</title>
+ </head>
+ <body>
+-    <h1> hola mundo</h1>
++    <h2> nuevo hola mundo</h2>
+ </body>
+ </html>
+\ No newline at end of file
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git branch
+  master
+* rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git commit -am " experimentos en rama2"
+[rama2 33250ad]  experimentos en rama2
+ 1 file changed, 4 insertions(+)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git push
+fatal: The current branch rama2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin rama2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git show
+commit 33250adad205b2ef7a3c0df05a1415645e96e224 (HEAD -> rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:23:12 2023 -0300
+
+     experimentos en rama2
+
+diff --git a/inicio.html b/inicio.html
+index fcf7e78..6ea682f 100644
+--- a/inicio.html
++++ b/inicio.html
+@@ -8,5 +8,9 @@
+ </head>
+ <body>
+     <h2> nuevo hola mundo</h2>
++    <p>lallllllllllllllllllllllllllllllllllllllll
++        jjjjjjjjjjjjjjjjjjjjjjjjjjj
++        ddddddddddddddddddddddddddd
++    </p>
+ </body>
+ </html>
+\ No newline at end of file
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git push rama2
+fatal: 'rama2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git push origin rama2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'rama2' on GitHub by visiting:
+remote:      https://github.com/josefretes2/viernes14/pull/new/rama2
+remote:
+To https://github.com/josefretes2/viernes14.git
+ * [new branch]      rama2 -> rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log
+commit 33250adad205b2ef7a3c0df05a1415645e96e224 (HEAD -> rama2, origin/rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:23:12 2023 -0300
+
+     experimentos en rama2
+
+commit b8c0f30fcec3c6bcb04018809f7790206112b965 (origin/master, master)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+commit 1a07cc650a848d09ea4d317273ed897129b99459
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:08:10 2023 -0300
+
+    agregué titulo
+
+commit ef3deceb2c772834eaf6495b499d214da58f1059
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 14:44:58 2023 -0300
+
+    primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log --oneline --graph
+* 33250ad (HEAD -> rama2, origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master, master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log --oneline --graph --decorate
+* 33250ad (HEAD -> rama2, origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master, master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git commit -am "agregue un boton"
+[rama2 8280b84] agregue un boton
+ 1 file changed, 2 insertions(+)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log --oneline --graph --decorate
+* 8280b84 (HEAD -> rama2) agregue un boton
+* 33250ad (origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master, master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log --oneline --graph
+* 8280b84 (HEAD -> rama2) agregue un boton
+* 33250ad (origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master, master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git merge rama2
+Updating b8c0f30..8280b84
+Fast-forward
+ inicio.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git branch
+* master
+  rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log --oneline
+8280b84 (HEAD -> master, rama2) agregue un boton
+33250ad (origin/rama2)  experimentos en rama2
+b8c0f30 (origin/master) cambie titulo a h2
+1a07cc6 agregué titulo
+ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log --oneline --graph
+* 8280b84 (HEAD -> master, rama2) agregue un boton
+* 33250ad (origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git commit -am "combine la rama 2 con la master"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log --oneline --graph
+* 8280b84 (HEAD -> master, rama2) agregue un boton
+* 33250ad (origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout 33250ad
+Note: switching to '33250ad'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 33250ad  experimentos en rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((33250ad...))
+$ git checkout 33250ad
+HEAD is now at 33250ad  experimentos en rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((33250ad...))
+$ git checkout 8280b84
+Previous HEAD position was 33250ad  experimentos en rama2
+HEAD is now at 8280b84 agregue un boton
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((8280b84...))
+$ git log --oneline --graph
+* 8280b84 (HEAD, rama2, master) agregue un boton
+* 33250ad (origin/rama2)  experimentos en rama2
+* b8c0f30 (origin/master) cambie titulo a h2
+* 1a07cc6 agregué titulo
+* ef3dece primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((8280b84...))
+$ git checkout b8c0f30
+Previous HEAD position was 8280b84 agregue un boton
+HEAD is now at b8c0f30 cambie titulo a h2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((b8c0f30...))
+$ git log
+commit b8c0f30fcec3c6bcb04018809f7790206112b965 (HEAD, origin/master)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+commit 1a07cc650a848d09ea4d317273ed897129b99459
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:08:10 2023 -0300
+
+    agregué titulo
+
+commit ef3deceb2c772834eaf6495b499d214da58f1059
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 14:44:58 2023 -0300
+
+    primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 ((b8c0f30...))
+$ git checkout master
+Previous HEAD position was b8c0f30 cambie titulo a h2
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/josefretes2/viernes14.git
+   b8c0f30..8280b84  master -> master
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ code .
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git pull
+Already up to date.
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   inicio.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git reset master
+Unstaged changes after reset:
+M       inicio.html
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git reset master --soft
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git log
+commit 8280b8424ef0dff7d53b06096d009d292612da13 (HEAD -> master, origin/master, rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:29:27 2023 -0300
+
+    agregue un boton
+
+commit 33250adad205b2ef7a3c0df05a1415645e96e224 (origin/rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:23:12 2023 -0300
+
+     experimentos en rama2
+
+commit b8c0f30fcec3c6bcb04018809f7790206112b965
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+commit 1a07cc650a848d09ea4d317273ed897129b99459
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:08:10 2023 -0300
+
+    agregué titulo
+
+commit ef3deceb2c772834eaf6495b499d214da58f1059
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 14:44:58 2023 -0300
+
+    primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git branch
+* master
+  rama2
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (master)
+$ git checkout rama2
+Switched to branch 'rama2'
+M       inicio.html
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git log
+commit 8280b8424ef0dff7d53b06096d009d292612da13 (HEAD -> rama2, origin/master, master)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:29:27 2023 -0300
+
+    agregue un boton
+
+commit 33250adad205b2ef7a3c0df05a1415645e96e224 (origin/rama2)
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:23:12 2023 -0300
+
+     experimentos en rama2
+
+commit b8c0f30fcec3c6bcb04018809f7790206112b965
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:12:41 2023 -0300
+
+    cambie titulo a h2
+
+commit 1a07cc650a848d09ea4d317273ed897129b99459
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 15:08:10 2023 -0300
+
+    agregué titulo
+
+commit ef3deceb2c772834eaf6495b499d214da58f1059
+Author: josefretes2 <josefretes2@gmail.com>
+Date:   Fri Jul 14 14:44:58 2023 -0300
+
+    primer esqueleto de pagina
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout ef3deceb2c772
+error: Your local changes to the following files would be overwritten by checkout:
+        inicio.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$ git checkout ^C
+
+Punto Digital@CH-FONTANA-009 MINGW64 /d/jose_fretes/viernes14 (rama2)
+$
